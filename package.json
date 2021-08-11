@@ -1,0 +1,59 @@
+{
+  "name": "appotek-clinics-service",
+  "version": "1.0.0",
+  "description": "clinics API (zeit/micro + ws + ts + swagger)",
+  "main": "dist/server.js",
+  "scripts": {
+    "compile": "tsc",
+    "dev:compile": "tsc -w",
+    "start": "npm run compile && node $NODE_DEBUG_OPTION dist/main.js",
+    "start:watch": "nodemon"
+  },
+  "author": {
+    "name": "NerdPeople",
+    "developer": "Vitaliy Zaika",
+    "url": "https://bitbucket.org/nerdpeople"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm run compile && node dist/main.js",
+    "ext": "ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/node-geocoder": "^3.24.1",
+    "amqplib": "^0.5.6",
+    "dotenv": "^8.1.0",
+    "fastest-validator": "^0.6.17",
+    "fs-router": "^0.4.2",
+    "jsonstream": "^1.0.3",
+    "libphonenumber-js": "^1.9.15",
+    "micro": "^9.3.3",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.3.0",
+    "node-geocoder": "^3.27.0",
+    "pg": "^7.8.0",
+    "pg-query-stream": "^2.0.0",
+    "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.13",
+    "@types/dotenv": "^6.1.1",
+    "@types/jsonstream": "^0.8.30",
+    "@types/micro": "^7.3.3",
+    "@types/node": "^11.13.0",
+    "@types/node-fetch": "^2.1.6",
+    "@types/pg": "^7.4.13",
+    "@types/pg-query-stream": "^1.0.2",
+    "@types/ws": "^7.2.4",
+    "typescript": "^3.3.3"
+  }
+}
